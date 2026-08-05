@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+
+    <header>
+        <h1>Recursos Multimídia</h1>
+        <p>Capítulo 4 — Atividade 4</p>
+    </header>
+
+    <main>
+
+        <!-- Bloco 1 - Vídeo -->
+        <figure>
+            <video
+                controls
+                width="800"
+                height="450"
+                poster="poster-aula.jpg"
+                preload="metadata">
+
+                <source src="videos/aula-html.mp4" type="video/mp4">
+                <source src="videos/aula-html.webm" type="video/webm">
+
+                <track
+                    kind="subtitles"
+                    src="legendas/aula-html.vtt"
+                    srclang="pt"
+                    label="Português"
+                    default>
+
+                <p>
+                    Seu navegador não suporta o elemento de vídeo.
+                    <a href="videos/aula-html.mp4">Clique aqui para baixar o vídeo.</a>
+                </p>
+            </video>
+
+            <figcaption>
+                Vídeo: Introdução aos recursos multimídia em HTML5.
+                Fonte: Material didático do curso.
+            </figcaption>
+        </figure>
+
+        <hr>
+
+        <!-- Bloco 2 - Áudio -->
+        <figure>
+            <audio controls preload="metadata">
+                <source src="audios/episodio-html.mp3" type="audio/mpeg">
+                <source src="audios/episodio-html.ogg" type="audio/ogg">
+
+                <p>
+                    Seu navegador não suporta o elemento de áudio.
+                    <a href="audios/episodio-html.mp3">Clique aqui para baixar o áudio.</a>
+                </p>
+            </audio>
+
+            <figcaption>
+                Episódio: Introdução ao HTML5 —
+                <a href="transcricao.html">Ler transcrição</a>.
+            </figcaption>
+        </figure>
+
+        <hr>
+
+        <!-- Bloco 3 - Vídeo Externo -->
+        <figure>
+            <iframe
+                width="800"
+                height="450"
+                src="https://www.youtube-nocookie.com/embed/v=Ejkb_YpuHWs"
+                title="Curso de HTML5 - Aula introdutória sobre HTML em português"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+            <figcaption>
+                Vídeo: Curso de HTML5 — Canal Curso em Vídeo.
+                Plataforma: YouTube.
+            </figcaption>
+        </figure>
+
+        <hr>
+
+        <!-- Bloco 4 - Imagem Responsiva -->
+        <figure>
+            <picture>
+                <source
+                    media="(min-width: 768px)"
+                    srcset="img/banner-wide.jpg">
+
+                <img
+                    src="img/banner-mobile.jpg"
+                    alt="Banner ilustrando uma plataforma de ensino com notebook, livros e recursos multimídia."
+                    width="800"
+                    height="450">
+            </picture>
+
+            <figcaption>
+                Banner ilustrativo utilizado para representar os recursos multimídia do ambiente virtual de aprendizagem.
+            </figcaption>
+        </figure>
+
+    </main>
+
+    <footer>
+        <p><strong>Nome:</strong> Matheus Sebastian vieira da Silva Santos</p>
+        <p><strong>Matrícula:</strong> 2026321248</p>
+        <p><strong>Data:</strong> 05/08/2026</p>
+    </footer>
+
+</body>
+</html>
