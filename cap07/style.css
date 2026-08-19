@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.cabecalho {
+  background-color: #1565c0;
+  padding: 2rem;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.subtitulo {
+  color: #bbdefb;
+  font-size: 1rem;
+}
+
+/* ---------- Menu ---------- */
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+/* apenas links dentro do menu */
+.menu a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Seções ---------- */
+
+.secao {
+  width: 90%;
+  max-width: 60rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Agrupamento */
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+h2 {
+  color: #1565c0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: #0d47a1;
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.destaque {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+/* parágrafo imediatamente após h2 */
+h2 + p {
+  margin-top: 1rem;
+}
+
+/* todos os parágrafos após .destaque */
+.destaque ~ p {
+  color: #555;
+}
+
+/* ---------- Cartões ---------- */
+
+.cartao {
+  display: inline-block;
+  width: 30%;
+  min-width: 250px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background: white;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* zebra */
+.cartao:nth-child(odd) {
+  background: #ffffff;
+}
+
+.cartao:nth-child(even) {
+  background: #f0f8ff;
+}
+
+/* todos menos o último */
+.cartao:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+/*
+:nth-child() permite selecionar elementos pela posição,
+dispensando a criação de classes extras no HTML.
+*/
+
+/* ---------- Botão ---------- */
+
+.botao {
+  display: inline-block;
+  background: #1565c0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: .5em 1em;
+  margin-top: .5em;
+}
+
+.botao:hover {
+  background: #0d47a1;
+}
+
+/* conflito proposital */
+.botao {
+  background: green;
+}
+
+/* maior especificidade: prevalece */
+.cartao .botao {
+  background: #1565c0;
+}
+
+/*
+A regra ".cartao .botao" vence porque possui maior especificidade
+que apenas ".botao", sem precisar utilizar !important.
+*/
+
+/* ---------- Lista ---------- */
+
+.lista-dias {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+/* somente filhos diretos */
+/*
+Espaço seleciona qualquer descendente.
+">" seleciona apenas filhos diretos.
+*/
+.lista-dias > li {
+  font-weight: bold;
+}
+
+.lista-dias > li:first-child {
+  color: green;
+}
+
+.lista-dias > li:last-child {
+  color: darkred;
+}
+
+/* ---------- Formulário ---------- */
+
+.formulario {
+  max-width: 30rem;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* agrupamento */
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: .5rem;
+  margin-top: .25rem;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #1565c0;
+}
+
+/* atributo */
+input[type="email"] {
+  border: 2px solid royalblue;
+}
+
+input[type="password"] {
+  border: 2px solid crimson;
+}
+
+label::after {
+  content: " *";
+  color: red;
+}
+
+button {
+  font-size: 1rem;
+  color: white;
+  background: #1565c0;
+  padding: .5rem 1.5rem;
+  margin-top: 1rem;
+  border: 0;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+  background: #263238;
+  color: #cfd8dc;
+  padding: 1.5rem;
+  font-size: .875rem;
+}
