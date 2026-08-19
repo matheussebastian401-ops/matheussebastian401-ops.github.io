@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Tecnologia</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        
+
+  <header id="topo">
+    <h1 class="titulo-principal">Portal de Tecnologia</h1>
+
+    <p class="subtitulo">
+      Exemplo completo para praticar CSS.
+    </p>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="noticias">
+      <h2>Notícias</h2>
+
+      <article class="card destaque">
+        <h3>Nova linguagem em alta</h3>
+
+        <p>
+          A linguagem
+          <span class="linguagem">Rust</span>
+          vem crescendo bastante.
+        </p>
+
+        <a href="#" class="botao">
+          Leia mais
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Framework JavaScript</h3>
+
+        <p>
+          Frameworks modernos facilitam o desenvolvimento web.
+        </p>
+
+        <a href="#" class="botao">
+          Saiba mais
+        </a>
+      </article>
+
+      <article class="card promocao">
+        <h3>Curso com desconto</h3>
+
+        <p>
+          Alunos possuem
+          <strong>30% de desconto</strong>.
+        </p>
+
+        <a href="#" class="botao especial">
+          Matricular
+        </a>
+      </article>
+    </section>
+
+    <section id="listas">
+      <h2>Listas</h2>
+
+      <div class="conteudo-lista">
+        <h3>Linguagens Front-end</h3>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="conteudo-lista">
+        <h3>Etapas do Projeto</h3>
+
+        <ol>
+          <li>Planejamento</li>
+          <li>Desenvolvimento</li>
+          <li>Testes</li>
+          <li>Entrega</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="formulario">
+      <h2>Cadastro</h2>
+
+      <form>
+
+        <div class="campo">
+          <label for="nome">Nome</label>
+
+          <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+          >
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+          >
+        </div>
+
+        <div class="campo">
+          <label for="curso">Curso</label>
+
+          <select id="curso">
+            <option>Informática</option>
+            <option>Sistemas de Informação</option>
+            <option>Engenharia de Software</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label>
+            <input type="checkbox">
+            Aceito os termos
+          </label>
+        </div>
+
+        <button type="submit" class="botao enviar">
+          Enviar
+        </button>
+
+      </form>
+    </section>
+
+    <section id="tabela">
+      <h2>Tabela de Notas</h2>
+
+      <table border="1">
+
+        <thead>
+          <tr>
+            <th>Aluno</th>
+            <th>Disciplina</th>
+            <th>Nota</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Ana</td>
+            <td>HTML</td>
+            <td class="aprovado">9.0</td>
+          </tr>
+
+          <tr>
+            <td>Bruno</td>
+            <td>CSS</td>
+            <td class="recuperacao">6.0</td>
+          </tr>
+
+          <tr>
+            <td>Carla</td>
+            <td>JavaScript</td>
+            <td class="reprovado">4.5</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <aside class="barra-lateral">
+
+    <h2>Dicas</h2>
+
+    <ul>
+      <li>Use seletores por tag</li>
+      <li>Use seletores por classe</li>
+      <li>Use seletores por ID</li>
+      <li>Teste pseudo-classes</li>
+      <li>Experimente combinadores</li>
+    </ul>
+
+  </aside>
+
+  <footer id="rodape">
+
+    <p>
+      Desenvolvido para aulas de CSS.
+    </p>
+
+  </footer>
+
+</body>
+</html>
