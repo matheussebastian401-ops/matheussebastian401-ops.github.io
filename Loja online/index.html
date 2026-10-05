@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Império do Badminton</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="faixa-aviso">
+    Frete grátis acima de R$ 199 em raquetes e petecas
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-loja">
+    <div class="container flex-wrap">
+      <a class="navbar-brand fw-bold marca" href="#">👑 Império do Badminton 🏸</a>
+
+      <button type="button"
+              class="btn btn-loja-outline position-relative ms-auto me-2 order-lg-3 ms-lg-3"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#carrinhoOffcanvas"
+              aria-controls="carrinhoOffcanvas"
+              aria-label="Abrir carrinho">
+        🛒
+        <span id="badge-carrinho"
+              class="badge badge-carrinho position-absolute top-0 start-100 translate-middle rounded-pill">
+          0
+        </span>
+      </button>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse order-lg-1" id="menu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Raquetes</a></li>
+              <li><a class="dropdown-item" href="#">Petecas</a></li>
+              <li><a class="dropdown-item" href="#">Cordas e Grips</a></li>
+              <li><a class="dropdown-item" href="#">Calçados</a></li>
+              <li><a class="dropdown-item" href="#">Roupas</a></li>
+              <li><a class="dropdown-item" href="#">Bolsas e Raqueteiras</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ofertas</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="d-flex col-12 col-lg-auto order-lg-2 mt-2 mt-lg-0" role="search">
+        <input class="form-control me-2" type="search"
+               placeholder="Buscar raquetes, petecas..." aria-label="Buscar">
+        <button class="btn btn-loja" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+
+    <div id="banners" class="carousel slide mb-4" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#banners" data-bs-slide-to="0"
+                class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#banners" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#banners" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner rounded">
+        <div class="carousel-item active" style="background:#7c3aed">
+          <img src="https://images.tcdn.com.br/img/img_prod/354638/raquete_de_badminton_yonex_b4000_13611_variacao_4255_1_ae8cc3c3830bbaaaeb1a0d16fbd2ff84.jpg"
+               data-original="https://images.tcdn.com.br/img/img_prod/354638/raquete_de_badminton_yonex_b4000_13611_variacao_4255_1_ae8cc3c3830bbaaaeb1a0d16fbd2ff84.jpg"
+               referrerpolicy="no-referrer"
+               onerror="this.onerror=null;this.src='https://placehold.co/1200x400/7c3aed/ffffff?text=Raquetes+Profissionais';this.classList.replace('object-fit-contain','object-fit-cover')"
+               data-modo="borda"
+               data-tolerancia="25"
+               class="sem-fundo d-block w-100 h-100 object-fit-contain"
+               alt="Raquete de badminton Yonex B4000">
+        </div>
+
+        <div class="carousel-item" style="background:#7c3aed">
+          <img src="https://sc04.alicdn.com/kf/Hbc433433a78d47f8b215cb5f6ce918f2J.jpg"
+               data-original="https://sc04.alicdn.com/kf/Hbc433433a78d47f8b215cb5f6ce918f2J.jpg"
+               referrerpolicy="no-referrer"
+               onerror="this.onerror=null;this.src='https://placehold.co/1200x400/7c3aed/ffffff?text=Petecas+de+Pena+Natural';this.classList.replace('object-fit-contain','object-fit-cover')"
+               data-modo="borda"
+               data-tolerancia="25"
+               class="sem-fundo d-block w-100 h-100 object-fit-contain"
+               alt="Petecas de pena natural">
+        </div>
+
+        <div class="carousel-item" style="background:#7c3aed">
+          <img src="https://www.yonex.com/media/catalog/product/a/l/all_shbelz3m_532-1.png?quality=90&amp;fit=bounds&amp;height=600&amp;width=480&amp;canvas=480:600"
+               data-original="https://www.yonex.com/media/catalog/product/a/l/all_shbelz3m_532-1.png?quality=90&amp;fit=bounds&amp;height=600&amp;width=480&amp;canvas=480:600"
+               referrerpolicy="no-referrer"
+               onerror="this.onerror=null;this.src='https://placehold.co/1200x400/7c3aed/ffffff?text=Calcados+para+Quadra';this.classList.replace('object-fit-contain','object-fit-cover')"
+               data-modo="borda"
+               data-tolerancia="4"
+               class="sem-fundo d-block w-100 h-100 object-fit-contain"
+               alt="Calçados para quadra">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button"
+              data-bs-target="#banners" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+
+      <button class="carousel-control-next" type="button"
+              data-bs-target="#banners" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3">Categorias</h2>
+
+      <div class="row g-3">
+        <div class="col-4 col-md-2">
+          <div class="card text-center h-100">
+            <div class="card-body p-2">
+              <div class="icone icone-categoria rounded-circle d-inline-flex align-items-center justify-content-center fs-2">🏸</div>
+              <p class="small mb-0 mt-2">Raquetes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <div class="card text-center h-100">
+            <div class="card-body p-2">
+              <div class="icone icone-categoria rounded-circle d-inline-flex align-items-center justify-content-center fs-2">🪶</div>
+              <p class="small mb-0 mt-2">Petecas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <div class="card text-center h-100">
+            <div class="card-body p-2">
+              <div class="icone icone-categoria rounded-circle d-inline-flex align-items-center justify-content-center fs-2">🧵</div>
+              <p class="small mb-0 mt-2">Cordas e Grips</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <div class="card text-center h-100">
+            <div class="card-body p-2">
+              <div class="icone icone-categoria rounded-circle d-inline-flex align-items-center justify-content-center fs-2">👟</div>
+              <p class="small mb-0 mt-2">Calçados</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <div class="card text-center h-100">
+            <div class="card-body p-2">
+              <div class="icone icone-categoria rounded-circle d-inline-flex align-items-center justify-content-center fs-2">👕</div>
+              <p class="small mb-0 mt-2">Roupas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <div class="card text-center h-100">
+            <div class="card-body p-2">
+              <div class="icone icone-categoria rounded-circle d-inline-flex align-items-center justify-content-center fs-2">🎒</div>
+              <p class="small mb-0 mt-2">Bolsas e Raqueteiras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h5 mb-0">Destaques</h2>
+        <a href="#" class="small link-roxo">Ver todos</a>
+      </div>
+
+      <div class="row g-3">
+
+        <div class="col-6 col-lg-3">
+          <div class="card h-100 position-relative" role="button"
+               data-bs-toggle="modal" data-bs-target="#produtoModal"
+               data-nome="Raquete Pro Carbono" data-preco="R$ 389,90">
+            <span class="badge badge-promocao position-absolute top-0 start-0 m-2">Promoção</span>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_853439-MLA99925031271_112025-O.webp"
+                 referrerpolicy="no-referrer"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/ede9fe/5b21b6?text=Raquete'"
+                 class="card-img-top produto-img" alt="Raquete Pro Carbono">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6">Raquete Pro Carbono</h3>
+              <p class="mb-3">
+                <span class="preco-antigo">R$ 389,90</span>
+                <strong>R$ 330,56</strong>
+              </p>
+              <button type="button" class="btn btn-loja mt-auto" data-acao="add-card">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="card h-100 position-relative" role="button"
+               data-bs-toggle="modal" data-bs-target="#produtoModal"
+               data-nome="Petecas de Pena (12 un.)" data-preco="R$ 79,90">
+            <img src="https://cdn.awsli.com.br/600x450/1537/1537255/produto/372356845/4-p6y1648rhk.png"
+                 referrerpolicy="no-referrer"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/ede9fe/5b21b6?text=Petecas'"
+                 class="card-img-top produto-img" alt="Petecas de Pena, caixa com 12 unidades">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6">Petecas de Pena (12 un.)</h3>
+              <p class="mb-3"><strong>R$ 123,68</strong></p>
+              <button type="button" class="btn btn-loja mt-auto" data-acao="add-card">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="card h-100 position-relative" role="button"
+               data-bs-toggle="modal" data-bs-target="#produtoModal"
+               data-nome="Tênis Indoor Court" data-preco="R$ 249,90">
+            <span class="badge badge-promocao position-absolute top-0 start-0 m-2">Promoção</span>
+            <img src="https://imgcentauro-a.akamaihd.net/1024x1024/M17Y6O01A2.jpg"
+                 referrerpolicy="no-referrer"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/ede9fe/5b21b6?text=Tenis'"
+                 class="card-img-top produto-img" alt="Tênis Indoor Court">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6">Tênis Indoor Court</h3>
+              <p class="mb-3">
+                <span class="preco-antigo">R$ 249,90</span>
+                <strong>R$ 208,25</strong>
+              </p>
+              <button type="button" class="btn btn-loja mt-auto" data-acao="add-card">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="card h-100 position-relative" role="button"
+               data-bs-toggle="modal" data-bs-target="#produtoModal"
+               data-nome="Raqueteira Térmica" data-preco="R$ 169,90">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDN5XpoWhk1BueGdXpLu6sEFT4_q1UOrLaC3RNLB_eWw&amp;s=10"
+                 referrerpolicy="no-referrer"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/ede9fe/5b21b6?text=Raqueteira'"
+                 class="card-img-top produto-img" alt="Raqueteira Térmica">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6">Raqueteira Térmica</h3>
+              <p class="mb-3"><strong>R$ 348,29</strong></p>
+              <button type="button" class="btn btn-loja mt-auto" data-acao="add-card">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="modal fade" id="produtoModal" tabindex="-1"
+         aria-labelledby="produtoTitulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="produtoTitulo">Produto</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+
+          <div class="modal-body">
+            <img src="https://placehold.co/600x400/ede9fe/5b21b6?text=Foto" class="modal-img mb-3 rounded" alt="">
+            <p>Equipamento de badminton de alta qualidade, ideal para treinos e competições.</p>
+            <p class="fs-5 fw-bold mb-0" id="produtoPreco"></p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-neutro-solido" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-loja" data-acao="add-modal" data-bs-dismiss="modal">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-5">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="banner-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKq8iwD_U8QyIirV9mBhKtqLwb-2PMIkotrCzIWywpWg&s"
+                 class="w-100 h-100 object-fit-contain rounded" alt="Kit iniciante de badminton" style="object-fit: contain; object-position: center; padding: 8px;">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="banner-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXn9_DWQ791KFwfEg7Yz1g-rFUzZiQM2Ye0st7l7GPVw&s=10"
+                 class="w-100 h-100 object-fit-contain rounded" alt="Petecas em promoção" style="object-fit: contain; object-position: center; padding: 8px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <div class="row g-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="icone icone-beneficio rounded-circle d-flex align-items-center justify-content-center fs-4 me-3 flex-shrink-0">🚚</div>
+          <span class="fw-semibold">Entrega para todo o Brasil</span>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="icone icone-beneficio rounded-circle d-flex align-items-center justify-content-center fs-4 me-3 flex-shrink-0">🔒</div>
+          <span class="fw-semibold">Pagamento seguro</span>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="icone icone-beneficio rounded-circle d-flex align-items-center justify-content-center fs-4 me-3 flex-shrink-0">🔁</div>
+          <span class="fw-semibold">Troca grátis em 30 dias</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center mb-5">
+      <h2 class="h5 mb-3">Receba nossas ofertas</h2>
+
+      <form class="newsletter-form mx-auto"
+            onsubmit="event.preventDefault(); alert('Inscrição realizada!')">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="seu@email.com"
+                 aria-label="E-mail" required>
+          <button class="btn btn-loja" type="submit">Assinar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="rodape pt-4">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-6 col-md-3 mb-3">
+          <h3 class="h6">Institucional</h3>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="link-rodape">Sobre o Império do Badminton</a></li>
+            <li><a href="#" class="link-rodape">Trabalhe conosco</a></li>
+            <li><a href="#" class="link-rodape">Política de privacidade</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3">
+          <h3 class="h6">Ajuda</h3>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="link-rodape">Como escolher sua raquete</a></li>
+            <li><a href="#" class="link-rodape">Trocas e devoluções</a></li>
+            <li><a href="#" class="link-rodape">Fale conosco</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3">
+          <h3 class="h6">Redes sociais</h3>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="link-rodape">Instagram</a></li>
+            <li><a href="#" class="link-rodape">Facebook</a></li>
+            <li><a href="#" class="link-rodape">YouTube</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3">
+          <h3 class="h6">Formas de pagamento</h3>
+          <span class="badge badge-pagamento">Visa</span>
+          <span class="badge badge-pagamento">Master</span>
+          <span class="badge badge-pagamento">Pix</span>
+          <span class="badge badge-pagamento">Boleto</span>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <p class="text-center small texto-suave pb-3 mb-0">
+        © 2026 Império do Badminton — Todos os direitos reservados
+      </p>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1"
+       id="carrinhoOffcanvas" aria-labelledby="carrinhoTitulo">
+
+    <div class="offcanvas-header cabecalho-carrinho">
+      <h2 class="offcanvas-title h5" id="carrinhoTitulo">Seu carrinho</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="carrinhoLista" class="flex-grow-1"></div>
+
+      <div class="rodape-carrinho pt-3">
+        <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+          <span>Total</span>
+          <span id="carrinhoTotal">R$ 0,00</span>
+        </div>
+
+        <button type="button" class="btn btn-perigo w-100 mb-2" data-acao="limpar">
+          Esvaziar carrinho
+        </button>
+
+        <button type="button" class="btn btn-loja w-100" data-acao="finalizar">
+          Finalizar compra
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    (function () {
+      function apagarConectado(p, w, h, ehFundo) {
+        var visto = new Uint8Array(w * h);
+        var pilha = [];
+
+        function tentar(x, y) {
+          if (x < 0 || y < 0 || x >= w || y >= h) return;
+
+          var k = y * w + x;
+
+          if (visto[k]) return;
+
+          var i = k * 4;
+
+          if (!ehFundo(p[i], p[i + 1], p[i + 2], p[i + 3])) return;
+
+          visto[k] = 1;
+          pilha.push(k);
+        }
+
+        var x, y;
+
+        for (x = 0; x < w; x++) {
+          tentar(x, 0);
+          tentar(x, h - 1);
+        }
+
+        for (y = 0; y < h; y++) {
+          tentar(0, y);
+          tentar(w - 1, y);
+        }
+
+        while (pilha.length) {
+          var k = pilha.pop();
+
+          x = k % w;
+          y = (k - x) / w;
+
+          p[k * 4 + 3] = 0;
+
+          tentar(x + 1, y);
+          tentar(x - 1, y);
+          tentar(x, y + 1);
+          tentar(x, y - 1);
+        }
+      }
+
+      document.querySelectorAll('#banners img.sem-fundo').forEach(function (el) {
+        var original = el.dataset.original;
+
+        if (!original) return;
+
+        var modo = el.dataset.modo || 'claro';
+        var tmp = new Image();
+
+        tmp.crossOrigin = 'anonymous';
+
+        tmp.onload = function () {
+          if (el.src !== tmp.src) return;
+
+          try {
+            var w = tmp.naturalWidth;
+            var h = tmp.naturalHeight;
+
+            var c = document.createElement('canvas');
+
+            c.width = w;
+            c.height = h;
+
+            var ctx = c.getContext('2d');
+
+            ctx.drawImage(tmp, 0, 0);
+
+            var d = ctx.getImageData(0, 0, w, h);
+            var p = d.data;
+
+            if (modo === 'escuro') {
+              apagarConectado(p, w, h, function (r, g, b) {
+                return Math.max(r, g, b) <= 60;
+              });
+            } else if (modo === 'borda') {
+              var r0 = p[0];
+              var g0 = p[1];
+              var b0 = p[2];
+
+              var cantoTransp = p[3] < 10;
+              var tol = parseInt(el.dataset.tolerancia, 10);
+
+              if (isNaN(tol)) tol = 4;
+
+              apagarConectado(p, w, h, function (r, g, b, a) {
+                if (a < 10) return true;
+
+                if (cantoTransp) return false;
+
+                return Math.abs(r - r0) <= tol &&
+                       Math.abs(g - g0) <= tol &&
+                       Math.abs(b - b0) <= tol;
+              });
+            } else {
+              for (var i = 0; i < p.length; i += 4) {
+                var min = Math.min(p[i], p[i + 1], p[i + 2]);
+
+                if (min >= 238) {
+                  p[i + 3] = 0;
+                } else if (min > 205) {
+                  p[i + 3] = Math.round(255 * (238 - min) / 33);
+                }
+              }
+            }
+
+            ctx.putImageData(d, 0, 0);
+
+            el.src = c.toDataURL('image/png');
+          } catch (e) {}
+        };
+
+        tmp.src = original;
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('produtoModal');
+
+      if (!modal) return;
+
+      modal.addEventListener('show.bs.modal', function (ev) {
+        var card = ev.relatedTarget;
+
+        if (!card) return;
+
+        var imgCard = card.querySelector('img.produto-img');
+        var imgModal = modal.querySelector('.modal-img');
+
+        if (!imgCard || !imgModal) return;
+
+        imgModal.referrerPolicy = 'no-referrer';
+        imgModal.src = imgCard.currentSrc || imgCard.src;
+        imgModal.alt = imgCard.alt || '';
+      });
+    })();
+  </script>
+
+</body>
+</html>
