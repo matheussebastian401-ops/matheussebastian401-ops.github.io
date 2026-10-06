@@ -1,4 +1,4 @@
-// Remove o fundo das imagens do carrossel (.sem-fundo) usando canvas.
+// Remove o fundo das imagens do carrossel (.sem-fundo) usando canvas
 (function () {
   function apagarConectado(p, w, h, ehFundo) {
     var visto = new Uint8Array(w * h);
