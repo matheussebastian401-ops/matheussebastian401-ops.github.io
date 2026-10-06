@@ -1,4 +1,3 @@
-// Remove o fundo das imagens do carrossel (.sem-fundo) usando canvas
 (function () {
   function apagarConectado(p, w, h, ehFundo) {
     var visto = new Uint8Array(w * h);
@@ -120,7 +119,6 @@
   });
 })();
 
-// Copia a imagem do card clicado para dentro do modal do produto.
 (function () {
   var modal = document.getElementById('produtoModal');
 
@@ -142,7 +140,6 @@
   });
 })();
 
-// Formulário de newsletter.
 (function () {
   var form = document.getElementById('form-newsletter');
 
